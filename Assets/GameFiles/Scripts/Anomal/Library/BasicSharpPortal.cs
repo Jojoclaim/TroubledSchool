@@ -1,7 +1,14 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class BasicSharpPortal : MonoBehaviour
 {
+    [Header("Hint")]
+    [SerializeField] TextMeshProUGUI hintDebug;
+    [SerializeField] string hintText;
+    [SerializeField] int triggerHintAfter;
+
     [Header("Teleportation")]
     [SerializeField] Transform Player; 
     [SerializeField] Transform Portal;
@@ -23,6 +30,8 @@ public class BasicSharpPortal : MonoBehaviour
 
     enum TeleportAxe { x, y, z };
     enum TriggerOrientation { positive, negative };
+
+    int teleportsCount = 0;
     Vector3 teleportDirection(float worldOffset)
     {
         Vector3 debugTpDirection = Vector3.zero;
@@ -87,7 +96,19 @@ public class BasicSharpPortal : MonoBehaviour
         Player.gameObject.GetComponent<CharacterController>().enabled = false;
         Player.position = Player.position + teleportDirection(offset) + additionalVectorOffset;
         Player.gameObject.GetComponent<CharacterController>().enabled = true;
-        Debug.Log("01");
+        teleportsCount++;
+        if (teleportsCount >= triggerHintAfter && triggerHintAfter > 0)
+        {
+            teleportsCount = 0;
+            hintDebug.text = hintText;
+            StartCoroutine(RemoveHint());
+        }
+    }
+
+    IEnumerator RemoveHint()
+    {
+        yield return new WaitForSeconds(2);
+        hintDebug.text = "";
     }
 
     void OnDrawGizmosSelected()
