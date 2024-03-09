@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 178701112b8058f4796141b08e4c2648
+guid: 8434424e13321394da50fa14b75c62f6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 066b445f18b4ec144add0befc4877519, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: dce06e1970198c14583c54041236c9db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: 723bba7d0a8f8434da976d95579b0d88, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +61,7 @@ ModelImporter:
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
