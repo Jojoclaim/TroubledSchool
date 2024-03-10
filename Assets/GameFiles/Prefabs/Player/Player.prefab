@@ -302,13 +302,13 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.514151, g: 1, b: 0.82641536, a: 1}
-  m_Intensity: 10
+  m_Intensity: 4
   m_Range: 12.460051
   m_SpotAngle: 105.00899
   m_InnerSpotAngle: 48.337555
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1153,7 +1153,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 150
+  far clip plane: 100
   field of view: 70
   orthographic: 0
   orthographic size: 5
