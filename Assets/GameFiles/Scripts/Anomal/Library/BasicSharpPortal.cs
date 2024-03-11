@@ -95,6 +95,7 @@ public class BasicSharpPortal : MonoBehaviour
     {
         Player.gameObject.GetComponent<CharacterController>().enabled = false;
         Player.position = Player.position + teleportDirection(offset) + additionalVectorOffset;
+        Debug.Log(Player.position);
         Player.gameObject.GetComponent<CharacterController>().enabled = true;
         teleportsCount++;
         if (teleportsCount >= triggerHintAfter && triggerHintAfter > 0)

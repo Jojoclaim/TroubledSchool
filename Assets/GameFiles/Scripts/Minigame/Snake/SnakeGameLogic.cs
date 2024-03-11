@@ -41,9 +41,9 @@ namespace Minigame.Snake
             Dictionary<KeyCode, int> keyToDirection = new Dictionary<KeyCode, int>
         {
             { KeyCode.W, 0 },
-            { KeyCode.D, 1 },
+            { KeyCode.D, 3 },
             { KeyCode.S, 2 },
-            { KeyCode.A, 3 }
+            { KeyCode.A, 1 }
         };
 
             foreach (var key in keyToDirection.Keys)

@@ -17,7 +17,7 @@ public class SwitchCameras : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && active)
+        if (Input.GetKeyDown(KeyCode.Escape) && active && snakeGameLogic)
         {
             SwitchCamera();
         }
@@ -41,11 +41,11 @@ public class SwitchCameras : MonoBehaviour
         Player.SetActive(!active);
         if (active)
         {
-            snakeGameLogic.StartGame();
+            snakeGameLogic?.StartGame();
         }
         else
         {
-            snakeGameLogic.ReturnTo3D();
+            snakeGameLogic?.ReturnTo3D();
         }
     }
 }
