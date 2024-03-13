@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering.Universal;
 
 namespace Minigame.Snake
 {
@@ -43,7 +42,11 @@ namespace Minigame.Snake
             { KeyCode.W, 0 },
             { KeyCode.D, 3 },
             { KeyCode.S, 2 },
-            { KeyCode.A, 1 }
+            { KeyCode.A, 1 },
+            { KeyCode.UpArrow, 0 },
+            { KeyCode.RightArrow, 3 },
+            { KeyCode.DownArrow, 2 },
+            { KeyCode.LeftArrow, 1 }
         };
 
             foreach (var key in keyToDirection.Keys)

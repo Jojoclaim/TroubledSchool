@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameFiles/Scenes/Demo/LibraryDemo.unity
-    guid: c5a59c52cce5ab9479f37abfc9bf524e
+    path: Assets/GameFiles/Scenes/InGame/Menu.unity
+    guid: 25bbc1dec932089419bb6deb296963a6
+  - enabled: 1
+    path: Assets/GameFiles/Scenes/InGame/School.unity
+    guid: 5de5eaf1751e6b645912d3d493df4cfa
+  - enabled: 1
+    path: Assets/GameFiles/Scenes/InGame/FinalScene.unity
+    guid: e0b28a0d8880ad740b3ba40f41d1fd20
   m_configObjects: {}

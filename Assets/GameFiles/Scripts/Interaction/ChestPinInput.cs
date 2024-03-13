@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,7 +43,7 @@ public class ChestPinInput : MonoBehaviour
 
     public void ChangeNumber()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Nr[x]++;
             if (Nr[x] > 9)
@@ -53,7 +51,7 @@ public class ChestPinInput : MonoBehaviour
                 Nr[x] = 0;
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             Nr[x]--;
             if (Nr[x] < 0)
@@ -61,15 +59,15 @@ public class ChestPinInput : MonoBehaviour
                 Nr[x] = 9;
             }
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             x--;
             if (x < 0)
             {
-                x = Nr.Length;
+                x = Nr.Length-1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             x++;
             if (x > Nr.Length)
